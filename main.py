@@ -1,4 +1,4 @@
-from langchain.text_splitter import CharacterTextSplitter
+import langchain
 from langchain.chains import RetrievalQA
 from langchain import HuggingFaceHub
 from langchain.embeddings import HuggingFaceEmbeddings
