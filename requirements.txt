@@ -1,0 +1,4 @@
+langchain
+chroma
+streamlit
+streamlit-chat
