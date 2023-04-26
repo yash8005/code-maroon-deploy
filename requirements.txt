@@ -1,5 +1,6 @@
 langchain
 chroma
+chromadb
 streamlit
 streamlit-chat
 huggingface_hub
