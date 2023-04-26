@@ -2,3 +2,4 @@ langchain
 chroma
 streamlit
 streamlit-chat
+huggingface_hub
