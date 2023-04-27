@@ -47,8 +47,6 @@ def get_answer():
         qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=docsearch.as_retriever(search_kwargs={"k": 1}),input_key="question")
         output = qa.run(query_text)
         st.write(output)
-        st.session_state.past.append(context_input)
-        st.session_state.generated.append(output)
 
 st.markdown("### Your Answer:")
 st.button("Click for answer", type='secondary', on_click=get_answer())
