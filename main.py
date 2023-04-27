@@ -16,7 +16,7 @@ template = """
 """
 
 def load_LLM():
-    llm = HuggingFaceHub(repo_id="google/flan-t5-small", model_kwargs={"temperature":0, "max_length":64},huggingfacehub_api_token="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")
+    llm = HuggingFaceHub(repo_id="google/flan-t5-small", model_kwargs={"temperature":0, "max_length":64})
     return llm
 
 st.set_page_config(page_title="Crisis Facts", page_icon=":robot:")
