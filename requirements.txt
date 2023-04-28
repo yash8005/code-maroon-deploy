@@ -6,3 +6,4 @@ streamlit-chat
 huggingface_hub
 sentence_transformers
 openai
+tiktoken

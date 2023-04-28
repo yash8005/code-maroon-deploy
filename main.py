@@ -8,8 +8,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from streamlit_chat import message
 import streamlit as st
 
-#os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
-#os.environ["OPENAI_API_KEY"] = "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"
 
 
 template = """
