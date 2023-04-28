@@ -1,5 +1,3 @@
-import langchain
-import openai
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.llms import OpenAI
 from langchain.chains import RetrievalQA
@@ -9,7 +7,7 @@ from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from streamlit_chat import message
 import streamlit as st
-import os
+
 #os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 #os.environ["OPENAI_API_KEY"] = "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"
 
