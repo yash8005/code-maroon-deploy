@@ -6,10 +6,11 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from streamlit_chat import message
+import asyncio
 import streamlit as st
 
 def load_T5():
-    llm_t5 = HuggingFaceHub(repo_id="google/flan-t5-small", model_kwargs={"temperature":0, "max_length":64})
+    llm_t5 = HuggingFaceHub(repo_id="google/flan-t5-xl", model_kwargs={"temperature":0, "max_length":64})
     return llm_t5
 
 st.set_page_config(page_title="Crisis Facts: Global Edition", page_icon=":shark:", layout="wide", initial_sidebar_state="expanded")
@@ -71,8 +72,14 @@ with right_column:
         st.subheader('_Output from :red[OpenAI]:_ ')
 
     if get_answer_button:
+        if(len(context_input)>3000):
+            st.error('Please enter smaller context.', icon="🚨")
+        if(len(query_text)==0):
+            st.error('Query is empty.', icon="🚨")
+        if(len(context_input)==0):
+            st.error('Context is empty.', icon="🚨")
         if not(openai_selected or t5_selected):
-            st.error('Please select atleaset 1 Model.', icon="🚨")
+            st.error('Please select atleast 1 Model.', icon="🚨")
 
         if context_input and query_text:
             text_splitter = RecursiveCharacterTextSplitter(chunk_size=20000, chunk_overlap=200,length_function = len)
