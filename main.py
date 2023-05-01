@@ -10,7 +10,7 @@ import asyncio
 import streamlit as st
 
 def load_T5():
-    llm_t5 = HuggingFaceHub(repo_id="google/flan-t5-xl", model_kwargs={"temperature":0, "max_length":64})
+    llm_t5 = HuggingFaceHub(repo_id="google/flan-t5-small", model_kwargs={"temperature":0, "max_length":64})
     return llm_t5
 
 st.set_page_config(page_title="Crisis Facts: Global Edition", page_icon=":shark:", layout="wide", initial_sidebar_state="expanded")
