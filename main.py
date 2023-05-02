@@ -4,7 +4,7 @@ from langchain.chains import RetrievalQA
 from langchain import HuggingFaceHub
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter
 from streamlit_chat import message
 import asyncio
 import streamlit as st
@@ -47,7 +47,7 @@ with right_column:
         with st.spinner(f"Running T5..."):
             embeddings = HuggingFaceEmbeddings()
             docsearch = Chroma.from_texts(texts, embeddings)
-            qa = RetrievalQA.from_chain_type(llm=llm_t5, chain_type="stuff", retriever=docsearch.as_retriever(search_kwargs={"k": 1}),input_key="question")
+            qa = RetrievalQA.from_chain_type(llm=llm_t5, chain_type="stuff", retriever=docsearch.as_retriever(search_kwargs={"k": 4}),input_key="question")
             output_t5 = qa.run(query_text)
             return output_t5
     
@@ -87,7 +87,8 @@ with right_column:
             flag=1
 
         if context_input and query_text and flag == 0:
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=20000, chunk_overlap=200,length_function = len)
+            text_splitter = CharacterTextSplitter(separator=".\n\n",chunk_size=10,chunk_overlap=0,
+    length_function = len)
             texts = text_splitter.split_text(context_input)
             with t5_col:
                 if(t5_selected):
