@@ -72,16 +72,21 @@ with right_column:
         st.subheader('_Output from :red[OpenAI]:_ ')
 
     if get_answer_button:
+        flag=0
         if(len(context_input)>3000):
             st.error('Please enter smaller context.', icon="🚨")
+            flag=1
         if(len(query_text)==0):
             st.error('Query is empty.', icon="🚨")
+            flag=1
         if(len(context_input)==0):
             st.error('Context is empty.', icon="🚨")
+            flag=1
         if not(openai_selected or t5_selected):
             st.error('Please select atleast 1 Model.', icon="🚨")
+            flag=1
 
-        if context_input and query_text:
+        if context_input and query_text and flag == 0:
             text_splitter = RecursiveCharacterTextSplitter(chunk_size=20000, chunk_overlap=200,length_function = len)
             texts = text_splitter.split_text(context_input)
             with t5_col:
