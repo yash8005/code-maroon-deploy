@@ -18,15 +18,15 @@ Information retrieval is a critical component of crisis response, but it's not a
 
 ## Usage
 
-*Enter your query and context in the text box provided.
-*Click Find Answers button to extract facts
+* Enter your query and context in the text box provided.
+* Click Find Answers button to extract facts
 
 
 ### Fork the repository.
-*Create a new branch for your changes.
-*Make your changes and commit them.
-*Push your changes to your forked repository.
-*Create a pull request.
+* Create a new branch for your changes.
+* Make your changes and commit them.
+* Push your changes to your forked repository.
+* Create a pull request.
 
 Acknowledgments
 We would like to thank the Texas A&M University community for their support and encouragement. BTHO fake news!
