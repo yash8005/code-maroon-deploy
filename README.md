@@ -10,19 +10,19 @@ Information retrieval is a critical component of crisis response, but it's not a
 * User-friendly web-based interface.
 * Getting Started
 
-##To get started with Code Maroon, follow these steps:
+## To get started with Code Maroon, follow these steps:
 
 * Clone the repository onto your local machine.
 * Install the required dependencies by running pip install -r requirements.txt.
 *Start the server by running streamlit run app.py.
 
-##Usage
+## Usage
 
 *Enter your query and context in the text box provided.
 *Click Find Answers button to extract facts
 
 
-###Fork the repository.
+### Fork the repository.
 *Create a new branch for your changes.
 *Make your changes and commit them.
 *Push your changes to your forked repository.
