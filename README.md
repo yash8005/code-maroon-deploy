@@ -14,7 +14,8 @@ Information retrieval is a critical component of crisis response, but it's not a
 
 For a more detailed overview of our project, including our methodology, experiments, and results, please visit our other repository Code Maroon Global Edition (https://github.com/yash8005/Code-Maroon-Global-Edition) . There, you will find information on the different models we tested, as well as the performance of each model on various datasets.
 
-
+## Report Website
+We have also created a website where you can find a detailed report of our experiments, including the methodology, results, and analysis. You can access the report website at https://yash8005.gitlab.io/code-maroon-report/
 
 ## To get started with Code Maroon, follow these steps:
 
