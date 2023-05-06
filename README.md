@@ -10,7 +10,7 @@ Information retrieval is a critical component of crisis response, but it's not a
 * User-friendly web-based interface.
 * Getting Started
 
-##Experiments and Results
+## Experiments and Results
 
 For a more detailed overview of our project, including our methodology, experiments, and results, please visit our other repository Code Maroon Global Edition (https://github.com/yash8005/Code-Maroon-Global-Edition) . There, you will find information on the different models we tested, as well as the performance of each model on various datasets.
 
